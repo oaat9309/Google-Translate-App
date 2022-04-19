@@ -1,12 +1,15 @@
 ## Google Translation App
 
-> React와 API를 활용한 번역기 어플리케이션입니다.
+> React와 API를 활용한 번역기 어플리케이션입니다. Backend단은 Node.js를 활용해 구성되어 있습니다.
 
 ## Tech Stack
 
+<p>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/>
 <img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=ESLint&logoColor=white"/>
 <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=Prettier&logoColor=white"/>
+</p>
 
 ## Project Desc.
 
