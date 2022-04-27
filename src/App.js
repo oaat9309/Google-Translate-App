@@ -5,6 +5,7 @@ import Modal from "./components/Modal";
 import { useState } from "react";
 
 function App() {
+  const [showModal, setShowModal] = useState(null);
   const [inputLanguage, setInputLanguage] = useState("English");
   const [outputLanguage, setOutputLanguage] = useState("Polish");
 
@@ -14,7 +15,11 @@ function App() {
   };
   return (
     <div className="app">
-      <TextBox selectedLanguage={inputLanguage} style="input" />
+      <TextBox
+        selectedLanguage={inputLanguage}
+        style="input"
+        setShowModal={setShowModal}
+      />
       <div className="arrow-container" onClick={handleClick}></div>
       <Arrows />
       <TextBox selectedLanguage={outputLanguage} style="output" />
