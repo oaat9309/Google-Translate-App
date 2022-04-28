@@ -19,7 +19,11 @@
 
 ### Application
 
+- state를 활용한 모달 창 구현
+
 ### CSS
+
+- w3c svg 이미지를 활용해 인터페이스 아이콘 추가
 
 ### Misc
 
