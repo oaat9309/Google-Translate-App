@@ -13,16 +13,23 @@ function App() {
     setInputLanguage(outputLanguage);
     setOutputLanguage(inputLanguage);
   };
+  console.log("showModal", showModal);
   return (
     <div className="app">
-      <TextBox
-        selectedLanguage={inputLanguage}
-        style="input"
-        setShowModal={setShowModal}
-      />
-      <div className="arrow-container" onClick={handleClick}></div>
-      <Arrows />
-      <TextBox selectedLanguage={outputLanguage} style="output" />
+      {!showModal && (
+        <>
+          <TextBox
+            selectedLanguage={inputLanguage}
+            style="input"
+            setShowModal={setShowModal}
+          />
+          <Modal />
+          <div className="arrow-container" onClick={handleClick}></div>
+          <Arrows />
+          <TextBox selectedLanguage={outputLanguage} style="output" />
+        </>
+      )}
+      {showModal && <Modal />}
     </div>
   );
 }
