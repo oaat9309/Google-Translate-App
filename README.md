@@ -16,6 +16,7 @@
 ### API
 
 - RapidAPI를 통해 Google Translate API 연결
+- Axios를 이용한 API Fetch
 
 ### Application
 
