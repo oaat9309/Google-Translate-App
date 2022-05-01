@@ -2,7 +2,7 @@ import Arrows from "./components/Arrows";
 import TextBox from "./components/TextBox";
 import Button from "./components/Button";
 import Modal from "./components/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
@@ -26,12 +26,19 @@ function App() {
       .request(options)
       .then(function (response) {
         console.log(response.data);
+        const arrayOfData = Object.keys(response.data.data).map(
+          (key) => response.data.data[key]
+        );
         setLanguages(response.data);
       })
       .catch(function (error) {
         console.error(error);
       });
   };
+
+  useEffect(() => {
+    getLanguages();
+  }, []);
 
   const handleClick = () => {
     setInputLanguage(outputLanguage);
@@ -53,7 +60,7 @@ function App() {
           <TextBox selectedLanguage={outputLanguage} style="output" />
         </>
       )}
-      {showModal && <Modal setShowModal={setShowModal} />}
+      {showModal && <Modal languages={languages} setShowModal={setShowModal} />}
     </div>
   );
 }
