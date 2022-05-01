@@ -1,7 +1,10 @@
 import { useState } from "react";
 
-const Modal = ({ setShowModal }) => {
+const Modal = ({ setShowModal, languages }) => {
   const [searchedLanguage, setSearchedLanguage] = useState("");
+  const filteredLanguages = languages.filter((language) =>
+    language.toLowerCase().startsWith(searchedLanguage).toLowerCase()
+  );
   const handleChange = (e) => {
     setSearchedLanguage(e.target.value);
   };
