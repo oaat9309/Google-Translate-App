@@ -1,6 +1,6 @@
 ## Google Translation App
 
-> React와 API를 활용한 번역기 어플리케이션입니다. Backend단은 Node.js를 활용해 구성되어 있습니다.
+> React와 API를 활용한 클론 코딩입니다. Backend단은 Node.js를 활용해 구성되어 있습니다.
 
 ## Tech Stack
 
