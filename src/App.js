@@ -60,7 +60,18 @@ function App() {
           <TextBox selectedLanguage={outputLanguage} style="output" />
         </>
       )}
-      {showModal && <Modal languages={languages} setShowModal={setShowModal} />}
+      {showModal && (
+        <Modal
+          languages={languages}
+          setShowModal={setShowModal}
+          chosenLanguage={
+            showModal === "input" ? inputLanguage : outputLanguage
+          }
+          setChosenLanguage={
+            showModal === "input" ? setInputLanguage : setOutputLanguage
+          }
+        />
+      )}
     </div>
   );
 }

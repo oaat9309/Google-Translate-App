@@ -1,8 +1,13 @@
 import { useState } from "react";
 
-const Modal = ({ setShowModal, languages }) => {
+const Modal = ({
+  setShowModal,
+  languages,
+  chosenLanguage,
+  setChosenLanguage,
+}) => {
   const [searchedLanguage, setSearchedLanguage] = useState("");
-  const [chosenLanguage, setChosenLanguage] = useState("");
+
   const filteredLanguages = languages.filter((language) =>
     language.toLowerCase().startsWith(searchedLanguage).toLowerCase()
   );
@@ -12,7 +17,7 @@ const Modal = ({ setShowModal, languages }) => {
   };
 
   const handleClick = (e) => {
-    setChosenLanguage(e.target.value);
+    setChosenLanguage(e.target.textContent);
     setShowModal(null);
   };
 
