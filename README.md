@@ -25,6 +25,7 @@
 ### CSS
 
 - w3c svg 이미지를 활용해 인터페이스 아이콘 추가
+- unicode table를 통해 특수 기호 삽입
 
 ### Misc
 
