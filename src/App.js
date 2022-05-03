@@ -77,14 +77,22 @@ function App() {
       {!showModal && (
         <>
           <TextBox
-            selectedLanguage={inputLanguage}
             style="input"
             setShowModal={setShowModal}
+            selectedLanguage={inputLanguage}
+            setTextToTranslate={setTextToTranslate}
+            textToTranslate={textToTranslate}
+            setTranslatedText={setTranslatedText}
           />
-          <Modal />
-          <div className="arrow-container" onClick={handleClick}></div>
-          <Arrows />
-          <TextBox selectedLanguage={outputLanguage} style="output" />
+          <div className="arrow-container" onClick={handleClick}>
+            <Arrows />
+          </div>
+          <TextBox
+            style="output"
+            setShowModal={setShowModal}
+            selectedLanguage={outputLanguage}
+            translatedText={translatedText}
+          />
           <div className="button-container" onClick={translate}>
             <Button />
           </div>
@@ -92,8 +100,9 @@ function App() {
       )}
       {showModal && (
         <Modal
-          languages={languages}
+          showModal={showModal}
           setShowModal={setShowModal}
+          languages={languages}
           chosenLanguage={
             showModal === "input" ? inputLanguage : outputLanguage
           }
