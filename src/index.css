@@ -1,5 +1,5 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: arial, sans-serif;
 }
 
 body {
@@ -17,17 +17,6 @@ body {
   height: 360px;
 }
 
-input {
-  border: 1px solid #818588;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #bdc1c6;
-  font-size: 14px;
-  height: 40px;
-  background-color: transparent;
-  width: 100%;
-}
-
 .output,
 .input {
   display: flex;
@@ -40,32 +29,18 @@ textarea {
   color: #bdc1c6;
   border: none;
   resize: none;
-  padding: 18px;
+  padding: 10px;
+  width: 280px !important;
   height: 146px;
   border-radius: 10px;
   outline: none;
   overflow: auto;
-  font-size: 20px;
+  font-size: 28px;
   margin-top: 10px;
 }
 
 .output textarea {
   background-color: #303134;
-}
-
-.select-drop-down input {
-  padding: 5px 15px;
-  font-size: 15px;
-  color: #8ab4f8;
-}
-
-.select-drop-down .down-arrow svg {
-  position: relative;
-  left: 265px;
-  top: -33px;
-  width: 26px;
-  height: 26px;
-  fill: #8ab4f8;
 }
 
 .arrow-container {
@@ -89,6 +64,17 @@ textarea {
   padding: 10px;
 }
 
+input {
+  border: 1px solid #818588;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #bdc1c6;
+  font-size: 14px;
+  height: 40px;
+  background-color: transparent;
+  width: 100%;
+}
+
 .search-bar input {
   background: url(https://www.gstatic.com/images/icons/material/system/2x/search_grey600_24dp.png)
     right 8px center no-repeat;
@@ -108,7 +94,7 @@ textarea {
 
 .option-container {
   height: 250px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .option-list ul {
@@ -118,6 +104,7 @@ textarea {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  overflow: auto;
 }
 
 .option-list li {
@@ -143,7 +130,30 @@ textarea {
 }
 
 .button-container {
-  color: #bcd1c6;
+  color: #bdc1c6;
   padding: 18px;
   height: 20px;
+}
+
+.select-drop-down input {
+  color: #8ab4f8;
+  padding: 5px 15px;
+  font-size: 15px;
+}
+
+.select-drop-down .down-arrow svg {
+  position: relative;
+  left: 265px;
+  top: -33px;
+  width: 26px;
+  height: 26px;
+  fill: #8ab4f8;
+}
+
+.input .delete {
+  position: relative;
+  left: 265px;
+  top: -156px;
+  font-size: 50px;
+  color: #bdc1c6;
 }
